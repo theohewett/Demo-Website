@@ -1,0 +1,349 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Universal Styles */
+html {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+}
+
+.block {
+    flex: 1;
+}
+
+nav {
+    display: flex;
+}
+
+header li {
+    text-transform: uppercase;
+    display: inline;
+    margin-right: 3rem;
+    letter-spacing: 0.3rem;
+}
+
+header li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header li a:hover {
+    color: gray
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    letter-spacing: 0.1rem;
+    font-weight: bolder;
+}
+
+.profile_checkout {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile_checkout a {
+    display: inline;
+    margin-left: 3rem;
+    font-size: 1rem;
+}
+
+.profile_checkout a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.profile_checkout a:hover {
+    color: gray;
+}
+
+/* New Styles Banner + Splash Text */
+
+.new-intro-container {
+    display: flex;
+    align-items: center;
+    margin: 3rem 10rem 3rem 10rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.styles {
+    max-width: 50%;
+    max-height: 95vh;
+}
+
+.styles h2,
+.styles p {
+    padding: 0 3rem 0 9rem;
+    text-align: right;
+}
+
+.styles h2 {
+    line-height: 6rem;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
+}
+
+.styles p {
+    line-height: 1.5rem;
+    font-weight: 300;
+}
+
+.styles p a {
+    text-transform: uppercase;
+    line-height: 6rem;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.styles p a:hover {
+    color: gray;
+}
+
+/* New Styles Reel */
+.new-reel-container {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 3rem 0;
+}
+
+.third {
+    flex: 1;
+    width: 33%;
+    max-height: 60vh;
+    object-fit: cover;
+}
+
+
+/* Large Galleries */
+.new-gallery-container,
+.philosophy-gallery-container {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+}
+
+.new-gallery-container img,
+.philosophy-gallery-container img {
+    flex: 1;
+    max-width: 48%;
+    max-height: 90vh;
+    object-fit: cover;
+}
+
+
+/* Secondary Banners + Splash Text */
+.intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0 3rem 0;
+    background-color: #f0f0f0;
+    flex-wrap: wrap;
+}
+
+.splash {
+    max-width: 50%;
+    max-height: 70vh;
+    object-fit: cover;
+    flex: 0 0 50%;
+}
+
+.splash h2,
+.splash p {
+    padding: 0 9rem 0 9rem;
+    text-align: center;
+}
+
+.splash h2 {
+    line-height: 6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+.splash p,
+.splash button {
+    line-height: 1.5rem;
+    font-weight: 300;
+}
+
+.splash button {
+    background-color: black;
+    padding: 0.8rem 2.5rem;
+    border: none;
+}
+
+.splash button a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-family: inherit;
+}
+
+.splash button:hover {
+    background-color: #303030;
+}
+
+/* Philosophy Mini Gallery */
+.philosophy-mini-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+}
+
+.philosophy-mini-gallery img {
+    max-width: 23%;
+    flex: 1;
+    max-height: 28vh;
+    object-fit: cover;
+}
+
+.subtitle,
+.as-seen {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: inherit;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Statements Gallery */
+.statement-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.statement-gallery img {
+    flex: 0 0 23%;
+    max-width: 23%;
+    max-height: 28vh;
+    margin-top: 4rem;
+    object-fit: cover;
+}
+
+
+/* As seen in... */
+.featured-in {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-in img {
+    flex: 1;
+    max-width: 8%;
+    height: auto;
+    margin: 0 4rem;
+}
+
+
+/* Footer */
+.information {
+    display: flex;
+    align-items: flex-start;
+    margin: 2rem;
+}
+
+.contact,
+.foot-nav,
+.copyright {
+    font-family: inherit;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    padding-right: 5rem;
+}
+
+.contact h2,
+.foot-nav h2 {
+    font-weight: bold;
+}
+
+.information h2,
+.information p, 
+.information li,
+.copyright {
+    padding-bottom: 1rem;
+}
+
+.information a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.information a:hover {
+    color: gray;
+}
+
+.copyright {
+    margin-left: 2rem;
+}
