@@ -1,20 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-v2.0 | 20110126
-License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -23,8 +7,7 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
 body {
@@ -36,8 +19,7 @@ ol, ul {
 blockquote, q {
     quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before, blockquote:after, q:before, q:after {
     content: '';
     content: none;
 }
@@ -52,6 +34,10 @@ html {
     font-size: 12px;
 }
 
+img {
+    border: 1px dotted black;
+}
+
 /* Header */
 
 header {
@@ -59,6 +45,8 @@ header {
     align-items: center;
     text-align: center;
     margin: 2rem;
+    /* position: fixed; */
+    max-height: 20vh;
 }
 
 .block {
@@ -125,6 +113,7 @@ header h1 a {
     margin: 3rem 10rem 3rem 10rem;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: #f0f0f0;
 }
 
 .styles {
@@ -202,14 +191,14 @@ header h1 a {
     justify-content: center;
     margin: 3rem 0 3rem 0;
     background-color: #f0f0f0;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
 }
 
 .splash {
-    max-width: 50%;
+    max-width: 49.9%;
     max-height: 70vh;
     object-fit: cover;
-    flex: 0 0 50%;
+    flex: 0 0 100%;
 }
 
 .splash h2,
@@ -294,7 +283,7 @@ header h1 a {
 /* As seen in... */
 .featured-in {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -346,4 +335,37 @@ header h1 a {
 
 .copyright {
     margin-left: 2rem;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 1048px) {
+    .styles {
+        max-height: fit-content;
+    }
+    
+    .styles h2,
+    .splash h2 {
+        letter-spacing: normal;
+        padding: 0;
+    }
+    
+    .styles h2,
+    .styles p {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .splash h2,
+    .splash p {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    nav {
+        display: none;
+    }
 }
